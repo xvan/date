@@ -81,11 +81,14 @@ namespace date
 // | Begin Configuration |
 // +---------------------+
 
+#ifndef TZTDATA_PATH
 #if _WIN32 // TODO: sensible default for all platforms.
-static std::string install{ "c:\\tzdata" };
+TZTDATA_PATH "c:\\tzdata" 
 #else
-static std::string install{ "/Users/howardhinnant/Downloads/tzdata2016a" };
+TZTDATA_PATH "/Users/howardhinnant/Downloads/tzdata2016a"
 #endif
+#endif
+static std::string install{ TZTDATA_PATH };
 
 static const std::vector<std::string> files =
 {
