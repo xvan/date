@@ -83,9 +83,9 @@ namespace date
 
 #ifndef TZTDATA_PATH
 #if _WIN32 // TODO: sensible default for all platforms.
-TZTDATA_PATH "c:\\tzdata" 
+#define TZTDATA_PATH "c:\\tzdata" 
 #else
-TZTDATA_PATH "/Users/howardhinnant/Downloads/tzdata2016a"
+#define TZTDATA_PATH "/Users/howardhinnant/Downloads/tzdata2016a"
 #endif
 #endif
 static std::string install{ TZTDATA_PATH };
